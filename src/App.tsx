@@ -23,7 +23,7 @@ const App: React.FC = () => {
         <Sidebar userName="Marco F" userImage="public\perfil react (1).png" onButtonClick={null} />
         <main>
         <section className="section">
-          <h1>Escuchar de nuevo</h1>
+          <h1>Listen Again</h1>
           <div className="song-list">
             {data.song.map((song) => (
               <SongCard key={song.id} song={song} imageUrl={song.imageUrl} />
