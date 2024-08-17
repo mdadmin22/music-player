@@ -40,10 +40,10 @@ interface Song {
       { id: 2, title: "Billie Jean", artist: "Michael Jackson", imageUrl: 'public/billieJean.png' },
     ],
     quickPicks: [
-      { id: 1, title: "Thriller", artist: "Michael Jackson", imageUrl: "http://localhost:5173/public/billieJean.png" },
-      { id: 2, title: "Billie Jean", artist: "Michael Jackson", imageUrl: "public/smoothcriminal.png" },
-      { id: 3, title: "Billie Jean", artist: "Michael Jackson", imageUrl: "public/smoothcriminal.png" },
-      { id: 4, title: "Billie Jean", artist: "Michael Jackson", imageUrl: "public/smoothcriminal.png" },
+      { id: 1, title: "song 1", artist: "artista 1", imageUrl: "public/cuadropeque.svg" },
+      { id: 2, title: "song 2", artist: "artista 2", imageUrl: "public/cuadropeque.svg" },
+      { id: 3, title: "song 3", artist: "artista 3", imageUrl: "public/cuadropeque.svg" },
+      { id: 4, title: "song 4", artist: "artista 4", imageUrl: "public/cuadropeque.svg" }
     ],
     recommendedAlbums: [
       { id: 4, title: "Billie Jean", name: "Mj", artist: "Michael Jackson", imageUrl: "public/smoothcriminal.png" },
@@ -54,14 +54,15 @@ interface Song {
       { id: 2, name: "Un artista similar 2", artist: "Nuevo Artista Similar2", imageUrl: "public/smoothcriminal.png" },
     ],
     song: [
-      { id: 1, title: "Cancion 1", artist: "Teddy Swims", imageUrl: "public/rockwhityou.png" },
-      { id: 2, title: "Cancion 1", artist: "Teddy Swims", imageUrl: "public/billieJean.png" },
+      { id: 1, title: "Escuchar 1", artist: "Artista 1", imageUrl: "public/Songs/Rectangle 1.svg" },
+      { id: 2, title: "Escuchar 2", artist: "Artista 2", imageUrl: "public/Songs/Rectangle 1.svg" }
     ],
     Album: [
-      { id: 1, title: "Bohemian Rhapsody", artist: "Freddie Mercury", imageUrl: "public/freddie1.jpeg", name: "freddie1" },
-      { id: 2, title: "Bohemian killers", artist: "Freddie Mercury", imageUrl: "public/freddie2.jpeg", name: "freddie2" },
-      { id: 3, title: "Bohemian Sellers", artist: "Freddie Mercury", imageUrl: "public/freddie 3.webp", name: "freddie3" },
-      { id: 4, title: "Bohemian Monkeys", artist: "Freddie Mercury", imageUrl: "public/fredie4.jpg", name: "freddie4" }
+      { id: 1, title: "Titulo 1", artist: "Artista 1", imageUrl: "public/similar_to.svg", name: "Art.1" },
+      { id: 2, title: "Titulo 2", artist: "Artista 2", imageUrl: "public/similar_to.svg", name: "Art.2" },
+      { id: 3, title: "Titulo 3", artist: "Artista 3", imageUrl: "public/similar_to.svg", name: "Art.3" },
+      { id: 4, title: "Titulo 4", artist: "Artista 4", imageUrl: "public/similar_to.svg", name: "Art.4" },
+      { id: 5, title: "Titulo 5", artist: "Artista 5", imageUrl: "public/similar_to.svg", name: "Art.5" }
     ],
     SideBarProps: []
   };

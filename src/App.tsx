@@ -7,6 +7,7 @@ import PlaybackBar from './components/Bars/PlayBackBar';
 import { data } from './data';
 import './App.css';
 import Sidebar from './components/Bars/SideBar';
+import ArtistCard from './components/Cards/ArtistCard';
 //import MenuBar from './components/Bars/MenuBar';
 //import FrameCard from './components/Cards/FrameCard';
 // src/index.js o src/App.js
@@ -22,7 +23,7 @@ const App: React.FC = () => {
         <Sidebar userName="Marco F" userImage="public\perfil react (1).png" onButtonClick={null} />
         <main>
         <section className="section">
-          <h2>Escuchar de nuevo</h2>
+          <h1>Escuchar de nuevo</h1>
           <div className="song-list">
             {data.song.map((song) => (
               <SongCard key={song.id} song={song} imageUrl={song.imageUrl} />
@@ -32,7 +33,9 @@ const App: React.FC = () => {
         </section>
 
         <section className="section">
-          <h2>Quick Picks</h2>
+          <h2>Start radio fromn a song</h2>
+          <h1>Quick Picks</h1>
+                    
           <div className="song-list">
             {data.quickPicks.map((song) => (
               <SongCard key={song.id} song={song} imageUrl={song.imageUrl} />
@@ -41,7 +44,7 @@ const App: React.FC = () => {
         </section>
 
         <section className="section">
-          <h2>Recomendados</h2>
+          <h1>Albums Recomendados</h1>
           <div className="album-list">
           {data.recommendedAlbums.map((song) => (
               <SongCard key={song.id} song={song} imageUrl={song.imageUrl} />
@@ -50,7 +53,8 @@ const App: React.FC = () => {
         </section>
 
         <section className="section">
-          <h2>ARTISTAS - Similares </h2>
+          <h1>Similar to</h1>
+          
           <div className="artist-list">
             {data.Album.map((artist) => (
               <AlbumCard key={artist.id} title={artist.name} artist={artist.artist} id={0} imageUrl={artist.imageUrl} name={artist.name} />
