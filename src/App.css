@@ -56,7 +56,9 @@ body {
 }
 
 main {
+  margin-left: 13%;
   padding: 20px 20px 110px 20px;
+  background-color: rgba(8, 8, 8, 0.781);
   
 }
 
