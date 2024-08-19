@@ -11,15 +11,14 @@ interface Song {
 interface SongCardProps {
   song: Song;
   imageUrl: string;
+  title?: string;
 }
 
 const SongCard: React.FC<SongCardProps> = ({ song }) => {
   return (
     <div className="song-card">
       <div className="song-info">
-        <div className="song-title">{song.id}</div>
-        <div className="song-title">{song.title}</div>
-        <div className="song-artist">{song.artist}</div>
+        <p className="song-artist">{song.artist}</p>
         <p>
         <img src={song.imageUrl} alt="imagen" />
         </p>

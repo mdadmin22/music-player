@@ -63,7 +63,7 @@ main {
 }
 
 .section {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .song-list,
@@ -72,4 +72,9 @@ main {
   display: flex;
   flex-wrap: wrap
   
+}
+
+.Filtros {
+  display: flex;
+  gap: 12px;
 }
