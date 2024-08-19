@@ -50,7 +50,24 @@ interface Song {
       { id: 1, title: "song 1", artist: "artista 1", imageUrl: "public/cuadropeque.svg" },
       { id: 2, title: "song 2", artist: "artista 2", imageUrl: "public/cuadropeque.svg" },
       { id: 3, title: "song 3", artist: "artista 3", imageUrl: "public/cuadropeque.svg" },
-      { id: 4, title: "song 4", artist: "artista 4", imageUrl: "public/cuadropeque.svg" }
+      { id: 4, title: "song 4", artist: "artista 4", imageUrl: "public/cuadropeque.svg" },
+      { id: 5, title: "song 5", artist: "artista 5", imageUrl: "public/cuadropeque.svg" },
+      { id: 6, title: "song 6", artist: "artista 6", imageUrl: "public/cuadropeque.svg" },
+      { id: 7, title: "song 7", artist: "artista 7", imageUrl: "public/cuadropeque.svg" },
+      { id: 8, title: "song 8", artist: "artista 8", imageUrl: "public/cuadropeque.svg" },
+      { id: 9, title: "song 9", artist: "artista 9", imageUrl: "public/cuadropeque.svg" },
+      { id: 10, title: "song 10", artist: "artista 10", imageUrl: "public/cuadropeque.svg" },
+      { id: 11, title: "song 11", artist: "artista 11", imageUrl: "public/cuadropeque.svg" },
+      { id: 12, title: "song 12", artist: "artista 12", imageUrl: "public/cuadropeque.svg" },
+      { id: 13, title: "song 13", artist: "artista 13", imageUrl: "public/cuadropeque.svg" },
+      { id: 14, title: "song 14", artist: "artista 14", imageUrl: "public/cuadropeque.svg" },
+      { id: 15, title: "song 15", artist: "artista 15", imageUrl: "public/cuadropeque.svg" },
+      { id: 16, title: "song 16", artist: "artista 16", imageUrl: "public/cuadropeque.svg" },
+      { id: 17, title: "song 17", artist: "artista 17", imageUrl: "public/cuadropeque.svg" },
+      { id: 18, title: "song 18", artist: "artista 18", imageUrl: "public/cuadropeque.svg" },
+      { id: 19, title: "song 19", artist: "artista 19", imageUrl: "public/cuadropeque.svg" },
+      { id: 20, title: "song 20", artist: "artista 20", imageUrl: "public/cuadropeque.svg" }      
+      
     ],
     recommendedAlbums: [
       { id: 4, title: "Billie Jean", name: "Mj", artist: "Michael Jackson", imageUrl: "public/smoothcriminal.png" },
