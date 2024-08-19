@@ -52,10 +52,12 @@
     border-radius: 5px;
     border: none;
     background-color: aqua;
+    color: red;
 
   }
 
   .sidebar-menu button {
-    padding: 1.5px;
+    padding: 5px;
+    color: rgb(139, 240, 81);
   }
   

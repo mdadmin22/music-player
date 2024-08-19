@@ -1,0 +1,13 @@
+/* ButtonWithImage.css */
+.button-with-image {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  
+}
+
+.button-image {
+  width: 100%; /* Ajusta el tamaño según tus necesidades */
+  height: 100%; /* Ajusta el tamaño según tus necesidades */
+}

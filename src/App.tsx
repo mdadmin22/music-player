@@ -17,13 +17,18 @@ import FilterButton from './components/Buttons/FilterButton';
 //import Listado from './components/Cards/Listado';
 //import ListenAgain from './components/Cards/ListenAgain';
 //import Sidebar from './components/Bars/Sidebar';
-
+import ButtonWithImage from './components/Buttons/MenuButton';
 function App() {
+  function handleClick(): void {
+    console.log('Sin funcion');
+  }
+
   return (
     <div className="app">
       <Header />
       
       <Sidebar userName="Marco F" userImage="public\perfil react (1).png" onButtonClick={null} />
+      <ButtonWithImage onClick={handleClick} altText='mi boton'/>
       
       <main>
         <section className='Filtros'>

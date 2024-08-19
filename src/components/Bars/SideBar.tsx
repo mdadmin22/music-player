@@ -13,6 +13,7 @@ const Sidebar: React.FC<Props> = ({ userName, userImage, onButtonClick }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-profile">
+        <button>{onButtonClick}</button>
         <img src={userImage} alt={`${userName} profile`} className="sidebar-profile-image" />
         <p>{userName}</p>
       </div>
