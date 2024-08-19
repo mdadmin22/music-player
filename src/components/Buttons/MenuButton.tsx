@@ -10,7 +10,7 @@ interface ButtonWithImageProps {
 const ButtonWithImage: React.FC<ButtonWithImageProps> = ({ onClick, altText = 'Button image' }) => {
   return (
     <button className="button-with-image" onClick={onClick}>
-      <img src="public/menu2.png" alt={altText} className="button-image" />
+      <img src="src/assets/menu.png" alt={altText} className="button-image" />
     </button>
   );
 };
