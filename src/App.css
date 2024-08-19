@@ -49,7 +49,7 @@ body {
   color: #888;
 }
 
-/* src/App.css */
+
 .app {
   font-family: Arial, sans-serif;
   color: #ece4e4;
@@ -63,10 +63,27 @@ main {
 }
 
 .section {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 2px ;  /* Borde fijo */
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-x: auto;  /* Habilitar el desplazamiento horizontal */
+  white-space: nowrap;  /* Prevenir que los elementos hijos se ajusten a la línea siguiente */
+  max-width: 70%;  /* Limitar el ancho máximo de la sección */
+  
 }
 
-.song-list,
+.song-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Espacio entre los elementos */
+  overflow-x: scroll;
+  white-space: nowrap;
+  margin-bottom: 10px;
+
+}
+
 .album-list,
 .artist-list {
   display: flex;
