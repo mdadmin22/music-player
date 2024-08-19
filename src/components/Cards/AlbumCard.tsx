@@ -15,7 +15,7 @@ function AlbumCard (album: AlbumCardProps)  {
       <div className="album-info">
         <div className="album-title">{album.title}</div>
         <div className="album-artist">{album.artist}</div>
-        <div className="album-name">{album.name}</div>
+        
         <img src={album.imageUrl} alt="Album Imagen" /> {/*preguntar ref al profe*/ }
         
       </div>

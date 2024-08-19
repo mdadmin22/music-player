@@ -1,5 +1,11 @@
 // src/data.ts 
 
+interface FilterChips {
+  id: number;
+  filter: string;
+  onButtonClick: string;
+  }
+
 interface Song {
     id: number;
     title: string;
@@ -32,6 +38,7 @@ interface Song {
     song: Song[]; 
     Album: Album[]; 
     SideBarProps: SideBarProps[]; 
+    FilterChips: FilterChips[];
   }
   
   export const data: Data = {
@@ -64,7 +71,17 @@ interface Song {
       { id: 4, title: "Titulo 4", artist: "Artista 4", imageUrl: "public/similar_to.svg", name: "Art.4" },
       { id: 5, title: "Titulo 5", artist: "Artista 5", imageUrl: "public/similar_to.svg", name: "Art.5" }
     ],
-    SideBarProps: []
+    SideBarProps: [],
+
+
+    FilterChips: [
+      { id: 1, filter: 'Meditacion', onButtonClick: ""},
+      { id: 2, filter: 'Relajacion', onButtonClick:"" },
+      { id: 3, filter: 'Mantras', onButtonClick:"" },
+      { id: 4, filter: 'Pop', onButtonClick: ""},
+      { id: 5, filter: 'Rock', onButtonClick:"" },
+      { id: 6, filter: 'Asadito', onButtonClick:"" },
+    ]
   };
  
   interface SideBarProps {

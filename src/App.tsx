@@ -1,4 +1,5 @@
 //import React from 'react';
+//import FilterChips from './components/Bars/FilterChips';
 import Header from './components/Header/Header';
 import SongCard from './components/Cards/SongCard';
 import AlbumCard from './components/Cards/AlbumCard';
@@ -7,6 +8,7 @@ import PlaybackBar from './components/Bars/PlayBackBar';
 import { data } from './data';
 import './App.css';
 import Sidebar from './components/Bars/SideBar';
+import FilterButton from './components/Buttons/FilterButton';
 //import ArtistCard from './components/Cards/ArtistCard';
 //import MenuBar from './components/Bars/MenuBar';
 //import FrameCard from './components/Cards/FrameCard';
@@ -20,13 +22,27 @@ function App() {
   return (
     <div className="app">
       <Header />
+      
       <Sidebar userName="Marco F" userImage="public\perfil react (1).png" onButtonClick={null} />
+      
       <main>
+        <section className='Filtros'>
+        {data.FilterChips.map((filter) =>
+          {
+            return(
+              <FilterButton key={filter.id} text= {filter.filter}/>
+            )
+          }
+          )
+          }  
+        </section>
+        
+      
         <section className="section">
           <h1>Listen Again</h1>
           <div className="song-list">
             {data.song.map((song) => (
-              <SongCard key={song.id} song={song} imageUrl={song.imageUrl} />
+              <SongCard key={song.id} title={song.title} song={song} imageUrl={song.imageUrl} />
 
             ))}
           </div>
@@ -38,7 +54,7 @@ function App() {
 
           <div className="song-list">
             {data.quickPicks.map((song) => (
-              <SongCard key={song.id} song={song} imageUrl={song.imageUrl} />
+              <SongCard key={song.id} song={song} imageUrl={song.imageUrl} title={''} />
             ))}
           </div>
         </section>
@@ -47,7 +63,7 @@ function App() {
           <h1>Albums Recomendados</h1>
           <div className="album-list">
             {data.recommendedAlbums.map((song) => (
-              <SongCard key={song.id} song={song} imageUrl={song.imageUrl} />
+              <SongCard key={song.id} song={song} imageUrl={song.imageUrl} title={''} />
             ))}
           </div>
         </section>
