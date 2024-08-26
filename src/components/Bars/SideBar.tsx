@@ -9,10 +9,11 @@ type Props = {
   onButtonClick: null; //esta prop no va**
 };
 
-const Sidebar: React.FC<Props> = ({ userName, userImage, onButtonClick }) => {
+const SideBar: React.FC<Props> = ({ userName, userImage, onButtonClick }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-profile">
+        <button>{onButtonClick}</button>
         <img src={userImage} alt={`${userName} profile`} className="sidebar-profile-image" />
         <p>{userName}</p>
       </div>
@@ -30,5 +31,5 @@ const Sidebar: React.FC<Props> = ({ userName, userImage, onButtonClick }) => {
   );
 }
 
-export default Sidebar;
+export default SideBar;
 
