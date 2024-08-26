@@ -88,7 +88,14 @@ interface Song {
       { id: 4, title: "Titulo 4", artist: "Artista 4", imageUrl: "public/similar_to.svg", name: "Art.4" },
       { id: 5, title: "Titulo 5", artist: "Artista 5", imageUrl: "public/similar_to.svg", name: "Art.5" }
     ],
-    SideBarProps: [],
+    SideBarProps: [
+      {
+        userName: "Marco", userImage: "public/PERFIL.png",
+        onButtonClick: function (): void {
+          throw new Error("Function not implemented.");
+        }
+      },
+    ],
 
 
     FilterChips: [
@@ -102,5 +109,7 @@ interface Song {
   };
  
   interface SideBarProps {
+    userName: string;
+    userImage: string;
     onButtonClick: () => void;
   }  
