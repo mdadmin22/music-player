@@ -6,4 +6,4 @@ pr2:
 
 ::rutas::
 pc work: D:\INFO2024\music-player
-pc home:
+pc home: H:\info2024\music-player
