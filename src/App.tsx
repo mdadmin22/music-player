@@ -29,6 +29,7 @@ function App() {
       </div>
       
       
+      
         <section className='Filtros'>
         {data.FilterChips.map((filter) =>
           {

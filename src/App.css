@@ -54,12 +54,23 @@ body {
   font-family: Arial, sans-serif;
   color: #ece4e4;
 }
+.container{
+  display: flex;
+}
+.sidebar {
+  width: 250px;
+}
 
 main {
-  margin-left: 35%;
-  padding: 20px 20px 110px 35px;
-  background-color: rgba(8, 8, 8, 0.781);
+  flex-direction: initial; 
+  /*margin-left: 8%;*/
+  /*padding: 20px;*/
+  background-color: rgba(211, 154, 116, 0.781);
+ 
   
+}
+.content {
+  margin: auto;
 }
 
 .section {
@@ -93,5 +104,5 @@ main {
 
 .Filtros {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
