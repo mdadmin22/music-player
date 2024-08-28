@@ -1,17 +1,17 @@
 /* src/components/Bars/Sidebar.css */
-
+/*
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #010202;
-    color: white;
-    padding: 30px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0 
-  }
-  
+  position: fixed;
+  top: 60px; 
+  width: 100px;
+  height: calc(100vh - 60px);
+  background-color: #444;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
   .sidebar-profile {
     display: flex;
     align-items: center;
@@ -60,4 +60,4 @@
     padding: 5px;
     color: rgb(139, 240, 81);
   }
-  
+  */

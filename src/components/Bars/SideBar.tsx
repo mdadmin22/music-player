@@ -20,7 +20,7 @@ const SideBar: React.FC<Props> = ({ userName, userImage, onButtonClick }) => {
       <ul className="sidebar-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#listen-again">Escuchar de Nuevo</a></li>
-        <li><a href="#suggested">Sugeridos</a></li>
+        <li><a href="#song-list">Quick Picks</a></li>
         <li><a href="#recommended">Recomendados</a></li>
         <li><a href="#similar">Similares</a></li>
         <button>{onButtonClick} + Nueva PlayList</button>

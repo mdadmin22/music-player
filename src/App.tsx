@@ -23,13 +23,12 @@ function App() {
 
   return (
     <div className="app">
-      <main>
+      
       <div> 
         <Layout children={undefined} />
-      </div>
+        </div>
       
-      
-      
+        <main>
         <section className='Filtros'>
         {data.FilterChips.map((filter) =>
           {
@@ -39,6 +38,7 @@ function App() {
           }
           )
           }  
+          
         </section>
         <section className="section">
           <h1>Listen Again</h1>
@@ -49,6 +49,7 @@ function App() {
             ))}
           </div>
         </section>
+        
 
         <section className="section">
           <h2>Start radio fromn a song</h2>
@@ -79,8 +80,9 @@ function App() {
             ))}
           </div>
         </section>
-
+        
       </main>
+      
       <PlaybackBar />
     </div>
   );

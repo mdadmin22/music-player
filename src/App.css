@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(221, 39, 39);
   color: white; /* Para asegurar que el texto sea visible */
 }
 
@@ -63,10 +63,10 @@ body {
 
 main {
   flex-direction: initial; 
-  /*margin-left: 8%;*/
+  margin-left: 130px;
   /*padding: 20px;*/
   background-color: rgba(211, 154, 116, 0.781);
- 
+ margin-bottom: 100px;
   
 }
 .content {
@@ -105,4 +105,7 @@ main {
 .Filtros {
   display: flex;
   gap: 10px;
-}
+  margin-top: 60px;
+  margin-left: 120px;
+  }
+  

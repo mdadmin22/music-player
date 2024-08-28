@@ -1,5 +1,5 @@
 /* src/components/Header.css */
-.header {
+/*.header {
     margin-left: 13%;
     display: flex;
     
@@ -9,7 +9,7 @@
     color: white;
     width: 100%;
     gap: 500px;
-  }
+  }*/
   
   .logo {
     font-size: 1em;

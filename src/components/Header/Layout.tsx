@@ -2,17 +2,20 @@
 
 import React from 'react';
 import './Layout.css';
+import SideBar from '../Bars/SideBar';
+import Header from './Header';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ }) => {
   return (
     <div className="layout">
-      <header className="header">Header</header>
-      <aside className="sidebar">SideBar</aside>
-      <main className="content">{children}</main>
+      
+      <Header/>      
+      <SideBar userName={''} userImage={'public/PERFIL.png'} onButtonClick={null}/>
+            
     </div>
   );
 };
