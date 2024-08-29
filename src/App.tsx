@@ -19,6 +19,7 @@ import FilterButton from './components/Buttons/FilterButton';
 //import Sidebar from './components/Bars/Sidebar';
 //import ButtonWithImage from './components/Buttons/MenuButton';
 import Layout from './components/Header/Layout';
+
 function App() {
 
   return (

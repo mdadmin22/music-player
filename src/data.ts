@@ -1,4 +1,3 @@
-// src/data.ts 
 
 interface FilterChips {
   id: number;
