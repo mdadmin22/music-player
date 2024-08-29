@@ -7,6 +7,7 @@ import Header from './Header';
 
 interface LayoutProps {
   children: React.ReactNode;
+  onButtonClick: true;
 }
 
 const Layout: React.FC<LayoutProps> = ({ }) => {

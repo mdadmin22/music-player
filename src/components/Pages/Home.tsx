@@ -14,7 +14,7 @@ function Home() {
     <div className="app">
       
       <div> 
-        <Layout children={undefined} />
+        
         </div>
       
         <main>
@@ -72,7 +72,7 @@ function Home() {
         
       </main>
       
-      <PlaybackBar />
+      
     </div>
   );
 }

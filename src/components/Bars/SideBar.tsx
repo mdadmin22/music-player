@@ -7,6 +7,7 @@ type Props = {
   userName: string;
   userImage: string; 
   onButtonClick: null; //esta prop no va**
+  
 };
 
 const SideBar: React.FC<Props> = ({ userName, userImage, onButtonClick }) => {
