@@ -109,3 +109,10 @@ main {
   margin-left: 120px;
   }
   
+li {
+  list-style-type: none;
+}  
+
+ul {
+padding: 20px;
+}
