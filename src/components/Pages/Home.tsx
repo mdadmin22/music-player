@@ -1,10 +1,8 @@
 
 import FilterButton from '../Buttons/FilterButton';
-import Layout from '../Header/Layout';
 import SongCard from '../Cards/SongCard';
 import { data } from '../../data';
 import AlbumCard from '../Cards/AlbumCard';
-import PlaybackBar from '../Bars/PlayBackBar';
 import '../../App.css';
 
 function Home() {
