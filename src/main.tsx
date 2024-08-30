@@ -8,7 +8,7 @@ import PlaylistForm from './components/Pages/PlayListForm.tsx'
 
 function Main () {
   
-  const [isPlaylistFormOpen, setisPlaylistFormOpen] =  useState (true);
+  const [isPlaylistFormOpen, setisPlaylistFormOpen] =  useState (false);
 
     return(
     <React.StrictMode>
