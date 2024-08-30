@@ -1,22 +1,17 @@
-// src/components/Layout.tsx
-
 import React from 'react';
-import './Layout.css';
 import SideBar from '../Bars/SideBar';
 import Header from './Header';
 
-interface LayoutProps {
-  children: React.ReactNode;
-  onButtonClick: true;
-}
-
-const Layout: React.FC<LayoutProps> = ({ }) => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="layout">
-      
-      <Header/>      
-      <SideBar userName={''} userImage={'public/PERFIL.png'} onButtonClick={null}/>
-            
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Header />
+      <div style={{ display: 'flex', flex: 1 }}>
+        <SideBar userName={''} userImage={''} onButtonClick={null} />
+        <main style={{ flex: 1, padding: '1rem' }}>
+          {children}
+        </main>
+      </div>
     </div>
   );
 };
