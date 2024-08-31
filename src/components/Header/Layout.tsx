@@ -5,7 +5,7 @@ import Header from './Header';
 interface Playlist {
   title: string;
   description: string;
-  url: string;
+  url?: string;
 }
 
 

@@ -12,18 +12,18 @@ interface Playlist {
   url?: string; 
 }
 function Main() {
-  const [isPlaylistFormOpen, setisPlaylistFormOpen] = useState(false);
+  const [isPlaylistFormOpen, setIsPlaylistFormOpen] = useState(false);
   const [playlists, setPlaylists] = useState<Playlist[]>([]) // Estado para las playlists
 
   const handleAddPlaylist = (title: string, description: string) => {
     setPlaylists([...playlists, { title, description }]); 
-    setisPlaylistFormOpen(false); // Cerrar el formulario después de agregar la playlist
+    setIsPlaylistFormOpen(false); // Cerrar el formulario después de agregar la playlist
   };
   
   return (
     <React.StrictMode>
       <Layout
-       onButtonClick={() => setisPlaylistFormOpen(true)} 
+       onButtonClick={() => setIsPlaylistFormOpen(true)} 
        playlists={playlists}>
 
         {!isPlaylistFormOpen ? (
@@ -31,7 +31,7 @@ function Main() {
         ) : (
           <PlaylistForm
             onSubmit={(title: string, description:string) => handleAddPlaylist(title, description)}
-            onCancel={() => setisPlaylistFormOpen(false)}
+            onCancel={() => setIsPlaylistFormOpen(false)}
           />
         )}
       </Layout>
