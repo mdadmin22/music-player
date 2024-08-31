@@ -20,13 +20,7 @@ function Main() {
     setisPlaylistFormOpen(false); // Cerrar el formulario después de agregar la playlist
   };
   
-<<<<<<< HEAD
-  const [isPlaylistFormOpen, setisPlaylistFormOpen] =  useState (false);
-
-    return(
-=======
   return (
->>>>>>> a91e3446b0302a1f50ca12fca1ae4781e89a2734
     <React.StrictMode>
       <Layout
        onButtonClick={() => setisPlaylistFormOpen(true)} 
