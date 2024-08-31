@@ -11,6 +11,7 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [privacy, setPrivacy] = useState('public');
+  
 
   const handleSubmit = () => {
     onSubmit(title, description, privacy);
@@ -25,7 +26,7 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
       </label>
       <label className='form-content'>
-        Descripción:
+      Descripción:
         <input value={description} onChange={(e) => setDescription(e.target.value)} />
       </label>
       <label className='form-content'>

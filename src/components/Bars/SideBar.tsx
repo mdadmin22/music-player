@@ -1,9 +1,9 @@
-// Dentro de tu componente SideBar
 import React from 'react';
 
 interface Playlist{
   title: string;
   description: string;
+  
 }
 
 interface SideBarProps {
@@ -21,7 +21,6 @@ const SideBar: React.FC<SideBarProps> = ({ playlists: Playlist, onButtonClick })
       <ul>
         {Playlist.map((playlist, index) => (
           <li key={index}>
-            {playlist.title}
             <strong>{playlist.title}</strong> 
             <p>{playlist.description}</p>
             </li>
