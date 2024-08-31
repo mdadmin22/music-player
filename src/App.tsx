@@ -28,7 +28,13 @@ function App() {
     <div className="app">
       
       <div> 
+<<<<<<< HEAD
         <Layout children={undefined} />
+=======
+        <Layout children={undefined} onButtonClick={function (): void {
+          throw new Error('Function not implemented.');
+        } } playlists={[]}  />
+>>>>>>> a91e3446b0302a1f50ca12fca1ae4781e89a2734
         </div>
       <section>
       <ButtonWithImage onClick={handleClick} altText='mi boton'/>

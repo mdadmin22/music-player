@@ -1,36 +1,34 @@
-// src/components/Sidebar.tsx
-
+// Dentro de tu componente SideBar
 import React from 'react';
-import './Sidebar.css';
 
-type Props = {
-  userName: string;
-  userImage: string; 
-  onButtonClick: null; //esta prop no va**
-  
-};
-
-const SideBar: React.FC<Props> = ({ userName, userImage, onButtonClick }) => {
-  return (
-    <div className="sidebar">
-      <div className="sidebar-profile">
-        <button>{onButtonClick}</button>
-        <img src={userImage} alt={`${userName} profile`} className="sidebar-profile-image" />
-        <p>{userName}</p>
-      </div>
-      <ul className="sidebar-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#listen-again">Escuchar de Nuevo</a></li>
-        <li><a href="#song-list">Quick Picks</a></li>
-        <li><a href="#recommended">Recomendados</a></li>
-        <li><a href="#similar">Similares</a></li>
-        <button>{onButtonClick} + Nueva PlayList</button>
-        
-      </ul>
-      
-    </div>
-  );
+interface Playlist{
+  title: string;
+  description: string;
 }
 
-export default SideBar;
+interface SideBarProps {
+  userName: string;
+  userImage: string;
+  onButtonClick: () => void;
+  playlists: Playlist[];
+}
 
+const SideBar: React.FC<SideBarProps> = ({ playlists: Playlist, onButtonClick }) => {
+  return (
+    <div className="sidebar">
+      {/* Información del usuario, otros botones, etc. */}
+      <button onClick={onButtonClick}>+Nueva Playlist</button>
+      <ul>
+        {Playlist.map((playlist, index) => (
+          <li key={index}>
+            {playlist.title}
+            <strong>{playlist.title}</strong> 
+            <p>{playlist.description}</p>
+            </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default SideBar;

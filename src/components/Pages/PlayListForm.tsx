@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './PlaylistForm.css';
+
 
 interface PlaylistFormProps {
   onSubmit: (title: string, description: string, privacy: string) => void;
@@ -15,27 +17,29 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
   };
 
   return (
+    
     <div>
-      <h2>Crear Nueva Playlist</h2>
-      <label>
+      <h2 className='form-content'>Crear Nueva Playlist</h2>
+      <label className='form-content'>
         Título:
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
       </label>
-      <label>
+      <label className='form-content'>
         Descripción:
         <input value={description} onChange={(e) => setDescription(e.target.value)} />
       </label>
-      <label>
+      <label className='form-content'>
         Privacidad:
         <select value={privacy} onChange={(e) => setPrivacy(e.target.value)}>
           <option value="public">Pública</option>
           <option value="private">Privada</option>
         </select>
       </label>
-      <button onClick={handleSubmit}>Crear</button>
-      <button onClick={onCancel}>Cancelar</button>
+      <button className='form-button' onClick={handleSubmit}>Crear</button>
+      <button className='form-button' onClick={onCancel}>Cancelar</button>
     </div>
   );
 };
 
 export default PlaylistForm;
+
