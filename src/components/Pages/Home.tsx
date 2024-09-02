@@ -3,13 +3,12 @@ import FilterButton from '../Buttons/FilterButton';
 import SongCard from '../Cards/SongCard';
 import { data } from '../../data';
 import AlbumCard from '../Cards/AlbumCard';
-import '../../App.css';
 
 function Home() {
    
 
   return (
-    <div className="app">
+    <div className="Home">
       
       <div> 
         

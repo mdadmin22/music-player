@@ -13,11 +13,11 @@ interface Playlist {
 }
 function Main() {
   const [isPlaylistFormOpen, setIsPlaylistFormOpen] = useState(false);
-  const [playlists, setPlaylists] = useState<Playlist[]>([]) // Estado para las playlists
+  const [playlists, setPlaylists] = useState<Playlist[]>([]) 
 
   const handleAddPlaylist = (title: string, description: string) => {
     setPlaylists([...playlists, { title, description }]); 
-    setIsPlaylistFormOpen(false); // Cerrar el formulario después de agregar la playlist
+    setIsPlaylistFormOpen(false); 
   };
   
   return (
