@@ -4,7 +4,7 @@ interface Playlist {
   title: string;
   description: string;
   imageUrl: string;
-  genre: string;
+  priv: string;
 }
 
 interface SideBarProps {
@@ -32,7 +32,7 @@ const SideBar: React.FC<SideBarProps> = ({
             />
             <div>
             <h4>{playlist.title}</h4>
-            <h3>{playlist.genre}</h3>
+            <h3>{playlist.priv}</h3>
             <p>{playlist.description}</p>            
             </div>
           </li>          

@@ -10,10 +10,10 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  const [genre, setGenre] = useState("");
+  const [priv, setPriv] = useState("");
 
   const handleSubmit = () => {
-    onSubmit(title, description, imageUrl, genre);
+    onSubmit(title, description, imageUrl, priv);
   };
 
   return (
@@ -49,8 +49,8 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
       <select
         className={styles.formulario_input}
         id="genre"
-        value={genre}
-        onChange={(e) => setGenre(e.target.value)}
+        value={priv}
+        onChange={(e) => setPriv(e.target.value)}
       >
         
         <option value="publica">Pública</option>
@@ -69,6 +69,14 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
         Cancelar
       </button>
       </div>
+      <div className={styles.preview_container}>
+        <h3>Vista Previa:</h3>
+        <p><strong>Título:</strong> {title}</p>
+        <p><strong>Descripción:</strong> {description}</p>
+        <p><strong>URL de Imagen:</strong> {imageUrl}</p>
+        <p><strong>Privacidad:</strong> {priv}</p>
+      </div>
+
     </section>
   );
 };

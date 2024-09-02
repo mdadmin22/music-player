@@ -10,14 +10,14 @@ interface Playlist {
   title: string;
   description: string;
   imageUrl?: string; 
-  genre: string;
+  priv: string;
 }
 function Main() {
   const [isPlaylistFormOpen, setisPlaylistFormOpen] = useState(false);
   const [playlists, setPlaylists] = useState<Playlist[]>([]) // Estado para las playlists
 
-  const handleAddPlaylist = (title: string, description: string, imageUrl: string, genre: string ) => {
-    setPlaylists([...playlists, { title, description, imageUrl, genre }]); 
+  const handleAddPlaylist = (title: string, description: string, imageUrl: string, priv: string ) => {
+    setPlaylists([...playlists, { title, description, imageUrl, priv }]); 
     setisPlaylistFormOpen(false); // Cerrar el formulario después de agregar la playlist
   };
   
@@ -31,7 +31,7 @@ function Main() {
           <Home />
         ) : (
           <PlaylistForm
-            onSubmit={(title: string, description:string, imageUrl:string, genre: string) => handleAddPlaylist(title, description, imageUrl, genre)}
+            onSubmit={(title: string, description:string, imageUrl:string, priv: string) => handleAddPlaylist(title, description, imageUrl, priv)}
             onCancel={() => setisPlaylistFormOpen(false)}
           />
         )}
