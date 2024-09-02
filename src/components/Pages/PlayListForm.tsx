@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./PlayListForm.module.css";
 
 interface PlaylistFormProps {
-  onSubmit: (title: string, description: string, imageUrl: string) => void;
+  onSubmit: (title: string, description: string, imageUrl: string, genre: string) => void;
   onCancel: () => void;
 }
 
@@ -10,9 +10,10 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [genre, setGenre] = useState("");
 
   const handleSubmit = () => {
-    onSubmit(title, description, imageUrl);
+    onSubmit(title, description, imageUrl, genre);
   };
 
   return (
@@ -42,6 +43,23 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
         value={imageUrl}
         onChange={(e) => setImageUrl(e.target.value)}
       />
+    <label htmlFor="genre" className="form-content">
+        Privacidad:
+      </label>
+      <select
+        className={styles.formulario_input}
+        id="genre"
+        value={genre}
+        onChange={(e) => setGenre(e.target.value)}
+      >
+        
+        <option value="publica">Pública</option>
+        <option value="privada">Privada</option>
+        <option value="oculta">Oculta</option>        
+      </select>
+
+
+
       <div className={styles.button_container}>
         <button className={styles.formulario_boton} onClick={handleSubmit}>
         Crear
