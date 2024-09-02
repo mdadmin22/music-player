@@ -1,0 +1,45 @@
+.app {
+  width: auto;
+  height: 100%;
+  margin-left: 232px;
+  padding: 120px 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filtros {
+  display: flex;
+  gap: 12px;
+  margin-top: .6rem;
+}
+
+.section_listenAgain,
+.section_quickPics,
+.section_albumsRecomendados,
+.section_similarTo {
+  margin-top: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.section_listenAgain_songList,
+.section_albumsRecomendados_albumList,
+.section_similarTo_albumList {
+  display: flex;
+  gap: 38px;
+  overflow-x: auto;
+  scrollbar-color: transparent transparent;
+}
+
+.section_listenAgain_songList:hover,
+.section_albumsRecomendados_albumList:hover,
+.section_similarTo_albumList:hover {
+  scrollbar-color: #3a3a3a #0C090B;
+}
+
+.section_quickPics_songList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr)); 
+  gap: 10px; 
+}

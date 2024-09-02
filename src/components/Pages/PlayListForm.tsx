@@ -1,43 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import styles from "./PlayListForm.module.css";
 
 interface PlaylistFormProps {
-  onSubmit: (title: string, description: string, privacy: string) => void;
+  onSubmit: (title: string, description: string, imageUrl: string) => void;
   onCancel: () => void;
 }
 
 const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [privacy, setPrivacy] = useState('public');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
 
   const handleSubmit = () => {
-    onSubmit(title, description, privacy);
+    onSubmit(title, description, imageUrl);
   };
 
   return (
-    <div>
-      <h2>Crear Nueva Playlist</h2>
-      <label>
+    <section id="formulario" className={styles.formulario_container}>
+      <h2 className={styles.formulario_tituloh2}>Crear Nueva Playlist</h2>
+      <label htmlFor="title" >
         Título:
-        <input value={title} onChange={(e) => setTitle(e.target.value)} />
       </label>
-      <label>
+      <input className={styles.formulario_input}
+        id="title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <label htmlFor="description" className="form-content">
         Descripción:
-        <input value={description} onChange={(e) => setDescription(e.target.value)} />
       </label>
-      <label>
-        Privacidad:
-        <select value={privacy} onChange={(e) => setPrivacy(e.target.value)}>
-          <option value="public">Pública</option>
-          <option value="private">Privada</option>
-        </select>
+      <input className={styles.formulario_input}
+        id="description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+      <label htmlFor="Imagen" className="form-content">
+        ImageUrl:
       </label>
-      <button onClick={handleSubmit}>Crear</button>
-      <button onClick={onCancel}>Cancelar</button>
-    </div>
+      <input className={styles.formulario_input}
+        id="Imagen"
+        value={imageUrl}
+        onChange={(e) => setImageUrl(e.target.value)}
+      />
+      <div className={styles.button_container}>
+        <button className={styles.formulario_boton} onClick={handleSubmit}>
+        Crear
+      </button>      
+      
+      <button className={styles.formulario_boton} onClick={onCancel}>
+        Cancelar
+      </button>
+      </div>
+    </section>
   );
 };
 
 export default PlaylistForm;
-
-/*hola*/

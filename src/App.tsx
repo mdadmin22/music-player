@@ -17,23 +17,21 @@ import FilterButton from './components/Buttons/FilterButton';
 //import Listado from './components/Cards/Listado';
 //import ListenAgain from './components/Cards/ListenAgain';
 //import Sidebar from './components/Bars/Sidebar';
-import ButtonWithImage from './components/Buttons/MenuButton';
+//import ButtonWithImage from './components/Buttons/MenuButton';
 import Layout from './components/Header/Layout';
+
 function App() {
-  function handleClick(): void {
-    console.log('Sin funcion');
-  }
 
   return (
     <div className="app">
       
       <div> 
-        <Layout children={undefined} />
+        <Layout children={undefined} onButtonClick={function (): void {
+          throw new Error('Function not implemented.');
+        } } playlists={[]}  />
         </div>
-      <section>
-      <ButtonWithImage onClick={handleClick} altText='mi boton'/>
-      </section>
-      <main>
+      
+        <main>
         <section className='Filtros'>
         {data.FilterChips.map((filter) =>
           {

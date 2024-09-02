@@ -1,4 +1,4 @@
-import './AlbumCard.css';
+
 
 type AlbumCardProps = {
   id: number;

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: white;
+}
+
+input {
+  background: none;
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 8px;
+  color: white;
+}
+
+html {
+  background: #1d1d1d;
+  color: white;
+}
+
+li{
+  list-style: none;  
+}

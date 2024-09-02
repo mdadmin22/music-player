@@ -1,0 +1,40 @@
+.formulario_container{
+    width: 500px;
+    height: 100%;
+    padding: 120px 0;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;  
+    gap: 10px;  
+    align-items: center;  
+
+    
+}
+
+.formulario_tituloh2{
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.formulario_input{
+    width: 416px;
+    height: 48px;
+    font-size: 20px;
+}
+
+.button_container{
+    display: flex;
+    gap: 25px;
+    flex-direction: row-reverse;
+    
+}
+
+.formulario_boton{
+    width: 100px;
+    height: 30px;
+    background: #2c2c2c;
+    border-radius: 51px;
+    margin-top: 20px;
+    
+}
