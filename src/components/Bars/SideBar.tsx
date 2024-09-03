@@ -31,9 +31,9 @@ const SideBar: React.FC<SideBarProps> = ({
               className={styles.imagen_container}
             />
             <div>
-            <h4>{playlist.title}</h4>
-            <h3>{playlist.priv}</h3>
-            <p>{playlist.description}</p>            
+            <h3>{playlist.title}</h3>
+            <h4>{playlist.description}</h4>  
+            <p>{playlist.priv}</p>                      
             </div>
           </li>          
         ))}

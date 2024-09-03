@@ -1,22 +1,27 @@
-.album-card {
+.album_card {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    padding: 5px;
-    
+    padding: 5px;    
     margin: 5px;
   }
   
-  .album-info {
+  .album_info {
     margin-left: 10px;
     margin-right: 5px;
   }
   
-  .album-title {
+  .album_title {
     font-weight: bold;
   }
   
-  .album-artist {
+  .album_artist {
     color: #666;
+  }
+
+  .album_imagen{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
   }
   

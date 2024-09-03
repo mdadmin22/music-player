@@ -1,5 +1,5 @@
 .formulario_container {
-    width: 900px; /* Aumenté el ancho del contenedor para dar espacio a la vista previa */
+    width: auto; /* Aumenté el ancho del contenedor para dar espacio a la vista previa */
     height: 100%;
     padding: 120px 0;
     margin-left: 250px;
@@ -7,6 +7,16 @@
     flex-direction: row; /* Cambié de 'column' a 'row' para alinear la vista previa a la derecha */
     gap: 20px; /* Aumenté el espacio entre el formulario y la vista previa */
     align-items: flex-start; /* Alinea la vista previa con el inicio del formulario */
+}
+
+.form_section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.form_section label {
+    align-self: flex-start;
 }
 
 .formulario_input {
@@ -25,7 +35,7 @@
 
 .button_container {
     display: flex;
-    gap: 25px;
+    gap: 100px;
     flex-direction: row-reverse;
     margin-top: 20px; /* Asegura que los botones tengan espacio entre el formulario y la vista previa */
 }

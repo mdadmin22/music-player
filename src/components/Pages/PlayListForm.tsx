@@ -25,8 +25,7 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
   return (
     <section id="formulario" className={styles.formulario_container}>
   <div className={styles.form_section}> 
-    {/* Añadí esta nueva clase para agrupar los inputs y evitar que interfieran con la vista previa */}
-    
+        
     <h2 className={styles.formulario_tituloh2}>Crear Nueva Playlist</h2>
     <label htmlFor="title">Título:</label>
     <input
@@ -62,9 +61,9 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
       value={priv}
       onChange={(e) => setPriv(e.target.value)}
     >
-      <option value="publica">Pública</option>
-      <option value="privada">Privada</option>
-      <option value="oculta">Oculta</option>
+      <option value="Pública">Pública</option>
+      <option value="Privada">Privada</option>
+      <option value="Oculta">Oculta</option>
     </select>
 
     <div className={styles.button_container}>
@@ -80,10 +79,11 @@ const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
   <div className={styles.preview_container}>
     <AlbumCard
       id={1}
-      title={description}
-      artist={title}
+      title={title}
+      artist={description}
       imageUrl={imageUrl}
-      name={title}
+      name={description}
+      priv={priv}
     />
   </div>
 </section>
