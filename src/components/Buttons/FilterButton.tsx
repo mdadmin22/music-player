@@ -1,4 +1,4 @@
-import './FilterButton.css' 
+import styles from "./FilterButton.module.css"
 
 type Props = { 
     text: string;
@@ -6,7 +6,7 @@ type Props = {
 
 function FilterButton (props : Props) {
     return (
-        <button>
+        <button className={styles.button_container}>
             {props.text}
         </button>
     )

@@ -1,0 +1,32 @@
+.sidebar {
+  width: 232px;
+  height: calc(100vw - 96px);
+  top: 96px;
+  left: 0;
+  position: fixed;
+  background: #0C090B;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #3a3a3a;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  background: #2c2c2c;
+  border-radius: 51px;
+}
+.imagen_container{
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+.itemlist_container{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+
+}

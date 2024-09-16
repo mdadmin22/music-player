@@ -1,40 +1,92 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import styles from "./PlayListForm.module.css";
+import AlbumCard from "../Cards/AlbumCard";
 
 interface PlaylistFormProps {
-  onSubmit: (title: string, description: string, privacy: string) => void;
+  onSubmit: (
+    title: string,
+    description: string,
+    imageUrl: string,
+    genre: string
+  ) => void;
   onCancel: () => void;
 }
 
 const PlaylistForm: React.FC<PlaylistFormProps> = ({ onSubmit, onCancel }) => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [privacy, setPrivacy] = useState('public');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [priv, setPriv] = useState("");
 
   const handleSubmit = () => {
-    onSubmit(title, description, privacy);
+    onSubmit(title, description, imageUrl, priv);
   };
 
   return (
-    <div>
-      <h2>Crear Nueva Playlist</h2>
-      <label>
-        Título:
-        <input value={title} onChange={(e) => setTitle(e.target.value)} />
-      </label>
-      <label>
-        Descripción:
-        <input value={description} onChange={(e) => setDescription(e.target.value)} />
-      </label>
-      <label>
-        Privacidad:
-        <select value={privacy} onChange={(e) => setPrivacy(e.target.value)}>
-          <option value="public">Pública</option>
-          <option value="private">Privada</option>
-        </select>
-      </label>
-      <button onClick={handleSubmit}>Crear</button>
-      <button onClick={onCancel}>Cancelar</button>
+    <section id="formulario" className={styles.formulario_container}>
+  <div className={styles.form_section}> 
+        
+    <h2 className={styles.formulario_tituloh2}>Crear Nueva Playlist</h2>
+    <label htmlFor="title">Título:</label>
+    <input
+      className={styles.formulario_input}
+      id="title"
+      value={title}
+      onChange={(e) => setTitle(e.target.value)}
+    />
+    <label htmlFor="description" className="form-content">
+      Descripción:
+    </label>
+    <input
+      className={styles.formulario_input}
+      id="description"
+      value={description}
+      onChange={(e) => setDescription(e.target.value)}
+    />
+    <label htmlFor="Imagen" className="form-content">
+      ImageUrl:
+    </label>
+    <input
+      className={styles.formulario_input}
+      id="Imagen"
+      value={imageUrl}
+      onChange={(e) => setImageUrl(e.target.value)}
+    />
+    <label htmlFor="privacy" className="form-content">
+      Privacidad:
+    </label>
+    <select
+      className={styles.formulario_input}
+      id="privacy"
+      value={priv}
+      onChange={(e) => setPriv(e.target.value)}
+    >
+      <option value="Pública">Pública</option>
+      <option value="Privada">Privada</option>
+      <option value="Oculta">Oculta</option>
+    </select>
+
+    <div className={styles.button_container}>
+      <button className={styles.formulario_boton} onClick={handleSubmit}>
+        Crear
+      </button>
+      <button className={styles.formulario_boton} onClick={onCancel}>
+        Cancelar
+      </button>
     </div>
+  </div>
+
+  <div className={styles.preview_container}>
+    <AlbumCard
+      id={1}
+      title={title}
+      artist={description}
+      imageUrl={imageUrl}
+      name={description}
+      priv={priv}
+    />
+  </div>
+</section>
   );
 };
 

@@ -1,31 +1,44 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import Home from './components/Pages/Home.tsx'
-import Layout from './components/Header/Layout.tsx'
-import PlaybackBar from './components/Bars/PlayBackBar.tsx'
-import PlaylistForm from './components/Pages/PlayListForm.tsx'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import Home from './components/Pages/Home.tsx';
+import Layout from './components/Header/Layout.tsx';
+import PlaybackBar from './components/Bars/PlayBackBar.tsx';
+import PlaylistForm from './components/Pages/PlayListForm.tsx';
+import "./main.css"
 
-function Main () {
+interface Playlist {
+  title: string;
+  description: string;
+  imageUrl?: string; 
+  priv: string;
+}
+function Main() {
+  const [isPlaylistFormOpen, setisPlaylistFormOpen] = useState(false);
+  const [playlists, setPlaylists] = useState<Playlist[]>([]) // Estado para las playlists
+
+  const handleAddPlaylist = (title: string, description: string, imageUrl: string, priv: string ) => {
+    setPlaylists([...playlists, { title, description, imageUrl, priv }]); 
+    setisPlaylistFormOpen(false); // Cerrar el formulario después de agregar la playlist
+  };
   
-  const [isPlaylistFormOpen, setisPlaylistFormOpen] =  useState (false);
-
-    return(
+  return (
     <React.StrictMode>
-    
-    <Layout children={undefined} onButtonClick={true} />
-    
-    {!isPlaylistFormOpen ? <Home /> :   <PlaylistForm onSubmit={function (_title: string, _description: string, _privacy: string): void {
-      throw new Error('Function not implemented.')
-    } } onCancel={function (): void {
-      throw new Error('Function not implemented.')
-    } } />}
-    
-    <PlaybackBar />
-    </React.StrictMode>
-  )
-} 
+      <Layout
+       onButtonClick={() => setisPlaylistFormOpen(true)} 
+       playlists={playlists}>
 
-ReactDOM.createRoot(document.getElementById('root')!).render(  
-  <Main/>
-)
+        {!isPlaylistFormOpen ? (
+          <Home />
+        ) : (
+          <PlaylistForm
+            onSubmit={(title: string, description:string, imageUrl:string, priv: string) => handleAddPlaylist(title, description, imageUrl, priv)}
+            onCancel={() => setisPlaylistFormOpen(false)}
+          />
+        )}
+      </Layout>
+      <PlaybackBar />
+    </React.StrictMode>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')!).render(<Main />);
