@@ -3,6 +3,8 @@ import SongCard from "../Cards/SongCard";
 import { data } from "../../data";
 import AlbumCard from "../Cards/AlbumCard";
 import styles from "./Home.module.css"
+import PodcastList from "../Cards/PodcastList";
+
 
 
 function Home() {
@@ -72,7 +74,10 @@ function Home() {
                 name={artist.name}
               />
             ))}
-          </div>
+          </div>          
+        </section>
+        <section>
+          <PodcastList/>
         </section>
       </main>
     </div>
