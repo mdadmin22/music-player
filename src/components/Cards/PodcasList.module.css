@@ -1,6 +1,6 @@
 /* src/components/PodcastList.module.css */
 .podcastList {
-    padding: 2px;
+    padding: 0px;
     background-color: #f5f5f5;
   }
   
@@ -11,12 +11,13 @@
   }
   
   .podcastItem {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #2c2525;
+    border: 1px solid #282828;
+    border-radius: 0px;
+    padding: 2px;
+    background-color: #1d1d1d;;
     transition: box-shadow 0.3s ease;
     cursor: pointer;
+    
   }
   
   .podcastItem:hover {
@@ -52,8 +53,8 @@
   .podcastItem h2 {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 300px; /* Ajusta el tamaño máximo según necesites */
+    text-overflow: ellipsis; /* Ajusta el texto*/
+    max-width: 1500px; /* Ajusta el tamaño máximo según necesites */
   }
   
   .podcastItem p {
