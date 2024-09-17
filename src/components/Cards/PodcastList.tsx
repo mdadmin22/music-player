@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "../Cards/PodcasList.module.css";
 
-// Define los tipos de props
 interface Podcast {
   setCurrentPodcast: (podcast: Podcast | null) => void;
   id: number;
@@ -21,8 +20,6 @@ interface Podcast {
 }
 
  
-
-
 const PodcastList: React.FC<Podcast> = ({ setCurrentPodcast }) => {
   const [podcasts, setPodcasts] = useState<Podcast[]>([]);
   const [isLoading, setIsLoading] = useState(true);

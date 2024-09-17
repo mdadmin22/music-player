@@ -86,7 +86,7 @@ function App() {
         
       </main>
       
-      <PlaybackBar />
+      <PlaybackBar currentPodcast={null} />
     </div>
   );
 }

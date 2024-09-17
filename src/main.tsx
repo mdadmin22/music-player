@@ -36,7 +36,7 @@ function Main() {
           />
         )}
       </Layout>
-      <PlaybackBar />
+      <PlaybackBar currentPodcast={null} />
     </React.StrictMode>
   );
 }

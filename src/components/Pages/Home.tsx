@@ -97,7 +97,7 @@ function Home() {
           
         </section>
       </main>
-      <PlaybackBar currentPodcast={currentPodcast}/>
+      
     </div>
   );
 }
