@@ -1,15 +1,21 @@
+import { useState } from "react";
 import FilterButton from "../Buttons/FilterButton";
 import SongCard from "../Cards/SongCard";
 import { data } from "../../data";
 import AlbumCard from "../Cards/AlbumCard";
 import styles from "./Home.module.css"
 import PodcastList from "../Cards/PodcastList";
+import PlaybackBar from "../Bars/PlayBackBar";
+
 
 
 
 function Home() {
+  const [currentPodcast, setCurrentPodcast] = useState<any | null>(null); 
+
   return (
     <div className={styles.app}>
+      
       <main>
         <section className={styles.filtros}>
           {data.FilterChips.map((filter) => {
@@ -77,9 +83,21 @@ function Home() {
           </div>          
         </section>
         <section>
-          <PodcastList/>
+          <h1>Lista de podcast fetch...</h1>
+          <PodcastList setCurrentPodcast={setCurrentPodcast} id={0} title={""} description={""} channel={{
+            urls: {
+              logo_image: {
+                original: ""
+              }
+            },
+            title: ""
+          }} urls={{
+            high_mp3: ""
+          }}/>
+          
         </section>
       </main>
+      <PlaybackBar currentPodcast={currentPodcast}/>
     </div>
   );
 }

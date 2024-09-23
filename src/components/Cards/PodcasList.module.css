@@ -29,8 +29,14 @@
     height: auto;
     object-fit: cover;
     border-radius: 8px;
+    /*cursor: pointer;
+    transition: opacity 0.3s ease;*/
   }
   
+
+
+ 
+
   button {
     margin-top: 10px;
     padding: 5px 15px;
@@ -68,5 +74,22 @@
     height: 100px; /* Ajusta la altura según tu diseño */
     object-fit: cover; /* Mantiene la proporción y recorta la imagen para que se ajuste */
     border-radius: 8px; /* Opcional: agrega bordes redondeados si lo deseas */
+  }
+  
+
+  
+  .podcastItem .playPauseIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    pointer-events: none; /* Evita que el clic toque el ícono en lugar de la imagen */
+  }
+  
+  .podcastImage:hover {
+    opacity: 0.7; /* Hace que la imagen sea un poco más oscura cuando se pasa el mouse */
   }
   

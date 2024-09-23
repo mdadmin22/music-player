@@ -1,21 +1,19 @@
-import styles from "./FrameCard.module.css";
+// src/components/Cards/FrameCard.tsx
 
-interface Frame {
-  time: string;
+interface FrameCardProps {
   title: string;
+  imgrtist: string; // Asegúrate de que esto se refiere a la imagen correcta
   artist: string;
-  imgrtist: string;
+  time: string; // Puedes cambiarlo a otro tipo si lo deseas
 }
 
-const FrameCard: React.FC<Frame> = (song) => {
+const FrameCard: React.FC<FrameCardProps> = ({ title, imgrtist, artist, time }) => {
   return (
-    <div className={styles.frame_card}>
-      <div className={styles.frame_info}>
-        <p className="frame-title">{song.title}</p>
-        <p className="frame-artist">{song.artist}</p>
-        <p className="id-artist">{song.time}</p>
-        <img src={song.imgrtist} className={styles.frame_img} />
-      </div>
+    <div>
+      <img src={imgrtist} alt={artist} />
+      <h3>{title}</h3>
+      <p>{artist}</p>
+      <p>{time}</p>
     </div>
   );
 };
