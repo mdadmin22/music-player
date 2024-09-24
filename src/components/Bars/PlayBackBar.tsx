@@ -30,16 +30,14 @@ const PlaybackBar: React.FC<PlaybackBarProps> = ({ currentPodcast }) => {
         </button>
       </div>
       <div className={styles.FrameCard}>
-        {currentPodcast ? (
-          <FrameCard
-            title={currentPodcast.title}
-            imgrtist={currentPodcast.channel.urls.logo_image.original}
-            artist={currentPodcast.channel.title}
-            time={"0:00/0:00"} // Cambiar para mostrar el tiempo 
-          />
-        ) : (
-          <p>No podcast playing</p>
-        )}
+      <FrameCard
+          title="Artista 1"
+          imgrtist="public\Rectangle 2.png"
+          artist="ART"
+          time={"0:15/3:10"}
+        />
+           
+           
       </div>
     </div>
   );
