@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import styles from "../Cards/PodcasList.module.css";
+import useFetchData from "../../customHooks/useFetchData";
 
 interface Podcast {
   setCurrentPodcast: (podcast: Podcast | null) => void;
@@ -19,29 +20,14 @@ interface Podcast {
   };
 }
 
+
  
 const PodcastList: React.FC<Podcast> = ({ setCurrentPodcast }) => {
-  const [podcasts, setPodcasts] = useState<Podcast[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+ 
   const [playingPodcast, setPlayingPodcast] = useState<number | null>(null);
   const audioRefs = useRef<HTMLAudioElement[]>([]);
-
-  useEffect(() => {
-    const fetchPodcasts = async () => {
-      try {
-        const response = await fetch("https://api.audioboom.com/audio_clips");
-        const data = await response.json();
-        setPodcasts(data.body.audio_clips);
-        setIsLoading(false);
-      } catch (error) {
-        setError("Failed to fetch podcasts");
-        setIsLoading(false);
-      }
-    };
-
-    fetchPodcasts();
-  }, []);
+  const { podcasts, isLoading, error } = useFetchData();
+  
 
   const handlePlay = (index: number, podcast: Podcast) => {
     if (playingPodcast !== null && playingPodcast !== index) {
