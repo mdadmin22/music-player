@@ -5,7 +5,6 @@ import { data } from "../../data";
 import AlbumCard from "../Cards/AlbumCard";
 import styles from "./Home.module.css"
 import PodcastList from "../Cards/PodcastList";
-import PlaybackBar from "../Bars/PlayBackBar";
 
 
 
