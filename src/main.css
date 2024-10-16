@@ -12,7 +12,7 @@ button {
   color: white;
 }
 
-input {
+input[type="text"] {
   background: none;
   border: 1px solid rgb(58, 58, 58);
   border-radius: 8px;
@@ -24,6 +24,39 @@ html {
   color: white;
 }
 
-li{
-  list-style: none;  
+li {
+  list-style: none;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #ff0000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #ff0000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background: #ff0000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
 }

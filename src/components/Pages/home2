@@ -134,3 +134,57 @@ function Home() {
 }
 
 export default Home;
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+interface Song {
+    id: number;
+    title: string;
+    artist: string;
+    imageUrl: string;
+  }
+  
+  interface SongCardProps {
+    song: Song;
+    imageUrl: string;
+    title?: string;
+  }
+  
+  const SongCard: React.FC<SongCardProps> = ({ song }) => {
+    return (
+      <div className="song-card">
+        <div className="song-info">
+          <p className="song-artist">{song.artist}</p>
+          <p>
+          <img src={song.imageUrl} alt="imagen" />
+          </p>
+        </div>
+      </div>
+    );
+  };
+  
+  export default SongCard;
+  
+
+  *****************************************
+
+  .song-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /*border: 1px solid #ddd;*/
+    /*margin: 5px 0;*/
+    overflow: auto ;
+  }
+  
+  
+  .song-title {
+    font-weight: bold;
+  }
+  
+  .song-artist {
+    color: #666;
+  }
+  

@@ -1,13 +1,13 @@
-import React from 'react';
-import SideBar from '../Bars/SideBar';
-import Header from './Header';
+import React from "react";
+import SideBar from "../Bars/SideBar";
+import Header from "./Header";
 
 interface Playlist {
   title: string;
   description: string;
-  url?: string;
+  imageUrl: string;
+  priv: string;
 }
-
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -15,14 +15,18 @@ interface LayoutProps {
   playlists: Playlist[];
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, onButtonClick, playlists }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  onButtonClick,
+  playlists,
+}) => {
   return (
     <div className="layout">
       <Header />
-      <SideBar 
+      <SideBar
         playlists={playlists}
-        userName={''}
-        userImage={'public/PERFIL.png'}
+        userName={""}
+        userImage={"public/PERFIL.png"}
         onButtonClick={onButtonClick} // Pasa la función al SideBar
       />
       <div className="content">

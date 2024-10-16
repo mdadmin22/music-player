@@ -21,3 +21,10 @@
 .FrameCard {
   width: 100%;
 }
+
+.time_elapsedTime {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  text-wrap: nowrap;
+}
