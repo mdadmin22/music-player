@@ -1,0 +1,34 @@
+/* SongCard.module.css */
+.songCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar contenido */
+  max-width: 200px; /* Ajustar el ancho máximo */
+  margin: 5px; /* Espaciado entre tarjetas */
+  overflow: hidden; /* Ocultar cualquier desbordamiento */
+  border: 1px solid #ccc; /* Opción de borde para mejorar la apariencia */
+  border-radius: 8px; /* Esquinas redondeadas */
+  padding: 10px; /* Espaciado interno */
+}
+
+.songImage {
+  width: 100%; /* Ancho completo */
+  height: auto; /* Mantener la proporción */
+  max-height: 150px; /* Altura máxima */
+  object-fit: cover; /* Cubrir el área, recortando si es necesario */
+}
+
+.songTitle {
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita para destacar el título */
+  margin: 5px 0; /* Espaciado entre título y descripción */
+  text-align: center; /* Centrar el texto */
+  overflow: hidden; /* Ocultar el texto que se desborda */
+  text-overflow: ellipsis; /* Poner '...' al final si el texto es muy largo */
+  white-space: nowrap; /* No permitir saltos de línea */
+}
+
+.songArtist {
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  text-align: center; /* Centrar el texto */
+}

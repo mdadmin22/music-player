@@ -5,13 +5,13 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <button>
-          <img src="src/assets/menu.svg" alt="menu" />
+          <img src="/menu.svg" alt="menu" />
         </button>
-        <img src="public\on_platform_logo_dark 1.svg" alt="logo" />
+        <img src="/on_platform_logo_dark 1.svg" alt="logo" />
       </div>
       <div className={styles.profile_container}>
         <input type="text" className="search" placeholder="Buscar..." />
-        <img src="public\perfil react (1).png" alt="Perfil" />
+        <img src="/perfil react (1).png" alt="Perfil" />
       </div>
     </header>
   );

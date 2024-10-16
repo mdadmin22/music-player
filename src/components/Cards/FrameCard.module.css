@@ -16,3 +16,9 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
+
+.text_description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
