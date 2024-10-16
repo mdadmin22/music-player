@@ -25,7 +25,7 @@ const PlaybackBar = () => {
       <ProgressBar />
       <div className={styles.playback_controls}>
         <button onClick={songContext?.handlePreviousAudio}>
-          <img src="public/skip_previous.svg" alt="Anterior" />
+          <img src="/skip_previous.svg" alt="Anterior" />
         </button>
         <button onClick={songContext?.handlePlayPause}>
           <img
@@ -36,7 +36,7 @@ const PlaybackBar = () => {
           />
         </button>
         <button onClick={songContext?.handleNextAudio}>
-          <img src="public/skip_next.svg" alt="Siguiente" />
+          <img src="/skip_next.svg" alt="Siguiente" />
         </button>
         <div className={styles.time_elapsedTime}>
           {songContext?.currentSong?.duration && (
