@@ -42,54 +42,54 @@ interface Song {
   
   export const data: Data = {
     listenAgain: [
-      { id: 1, title: "Thriller", artist: "Michael Jackson", imageUrl: 'public/smoothcriminal.png' },
-      { id: 2, title: "Billie Jean", artist: "Michael Jackson", imageUrl: 'public/billieJean.png' },
+      { id: 1, title: "Thriller", artist: "Michael Jackson", imageUrl: '/smoothcriminal.png' },
+      { id: 2, title: "Billie Jean", artist: "Michael Jackson", imageUrl: '/billieJean.png' },
     ],
     quickPicks: [
-      { id: 1, title: "song 1", artist: "artista 1", imageUrl: "public/cuadropeque.svg" },
-      { id: 2, title: "song 2", artist: "artista 2", imageUrl: "public/cuadropeque.svg" },
-      { id: 3, title: "song 3", artist: "artista 3", imageUrl: "public/cuadropeque.svg" },
-      { id: 4, title: "song 4", artist: "artista 4", imageUrl: "public/cuadropeque.svg" },
-      { id: 5, title: "song 5", artist: "artista 5", imageUrl: "public/cuadropeque.svg" },
-      { id: 6, title: "song 6", artist: "artista 6", imageUrl: "public/cuadropeque.svg" },
-      { id: 7, title: "song 7", artist: "artista 7", imageUrl: "public/cuadropeque.svg" },
-      { id: 8, title: "song 8", artist: "artista 8", imageUrl: "public/cuadropeque.svg" },
-      { id: 9, title: "song 9", artist: "artista 9", imageUrl: "public/cuadropeque.svg" },
-      { id: 10, title: "song 10", artist: "artista 10", imageUrl: "public/cuadropeque.svg" },
-      { id: 11, title: "song 11", artist: "artista 11", imageUrl: "public/cuadropeque.svg" },
-      { id: 12, title: "song 12", artist: "artista 12", imageUrl: "public/cuadropeque.svg" },
-      { id: 13, title: "song 13", artist: "artista 13", imageUrl: "public/cuadropeque.svg" },
-      { id: 14, title: "song 14", artist: "artista 14", imageUrl: "public/cuadropeque.svg" },
-      { id: 15, title: "song 15", artist: "artista 15", imageUrl: "public/cuadropeque.svg" },
-      { id: 16, title: "song 16", artist: "artista 16", imageUrl: "public/cuadropeque.svg" },
-      { id: 17, title: "song 17", artist: "artista 17", imageUrl: "public/cuadropeque.svg" },
-      { id: 18, title: "song 18", artist: "artista 18", imageUrl: "public/cuadropeque.svg" },
-      { id: 19, title: "song 19", artist: "artista 19", imageUrl: "public/cuadropeque.svg" },
-      { id: 20, title: "song 20", artist: "artista 20", imageUrl: "public/cuadropeque.svg" }      
+      { id: 1, title: "song 1", artist: "artista 1", imageUrl: "/cuadropeque.svg" },
+      { id: 2, title: "song 2", artist: "artista 2", imageUrl: "/cuadropeque.svg" },
+      { id: 3, title: "song 3", artist: "artista 3", imageUrl: "/cuadropeque.svg" },
+      { id: 4, title: "song 4", artist: "artista 4", imageUrl: "/cuadropeque.svg" },
+      { id: 5, title: "song 5", artist: "artista 5", imageUrl: "/cuadropeque.svg" },
+      { id: 6, title: "song 6", artist: "artista 6", imageUrl: "/cuadropeque.svg" },
+      { id: 7, title: "song 7", artist: "artista 7", imageUrl: "/cuadropeque.svg" },
+      { id: 8, title: "song 8", artist: "artista 8", imageUrl: "/cuadropeque.svg" },
+      { id: 9, title: "song 9", artist: "artista 9", imageUrl: "/cuadropeque.svg" },
+      { id: 10, title: "song 10", artist: "artista 10", imageUrl: "/cuadropeque.svg" },
+      { id: 11, title: "song 11", artist: "artista 11", imageUrl: "/cuadropeque.svg" },
+      { id: 12, title: "song 12", artist: "artista 12", imageUrl: "/cuadropeque.svg" },
+      { id: 13, title: "song 13", artist: "artista 13", imageUrl: "/cuadropeque.svg" },
+      { id: 14, title: "song 14", artist: "artista 14", imageUrl: "/cuadropeque.svg" },
+      { id: 15, title: "song 15", artist: "artista 15", imageUrl: "/cuadropeque.svg" },
+      { id: 16, title: "song 16", artist: "artista 16", imageUrl: "/cuadropeque.svg" },
+      { id: 17, title: "song 17", artist: "artista 17", imageUrl: "/cuadropeque.svg" },
+      { id: 18, title: "song 18", artist: "artista 18", imageUrl: "/cuadropeque.svg" },
+      { id: 19, title: "song 19", artist: "artista 19", imageUrl: "/cuadropeque.svg" },
+      { id: 20, title: "song 20", artist: "artista 20", imageUrl: "/cuadropeque.svg" }      
       
     ],
     recommendedAlbums: [
-      { id: 4, title: "Billie Jean", name: "Mj", artist: "Michael Jackson", imageUrl: "public/smoothcriminal.png" },
-      { id: 7, title: "Billie Jean", name: "MMJJ", artist: "Michael Jackson", imageUrl: "public/smoothcriminal.png" },
+      { id: 4, title: "Billie Jean", name: "Mj", artist: "Michael Jackson", imageUrl: "/smoothcriminal.png" },
+      { id: 7, title: "Billie Jean", name: "MMJJ", artist: "Michael Jackson", imageUrl: "/smoothcriminal.png" },
     ],
     similarArtists: [
       { id: 1, name: "Un artista Similar 1", artist: "Nuevo Artista Similar1", imageUrl: "-" },
-      { id: 2, name: "Un artista similar 2", artist: "Nuevo Artista Similar2", imageUrl: "public/smoothcriminal.png" },
+      { id: 2, name: "Un artista similar 2", artist: "Nuevo Artista Similar2", imageUrl: "/smoothcriminal.png" },
     ],
     song: [
-      { id: 1, title: "Escuchar 1", artist: "Artista 1", imageUrl: "public/Songs/Rectangle 1.svg" },
-      { id: 2, title: "Escuchar 2", artist: "Artista 2", imageUrl: "public/Songs/Rectangle 1.svg" }
+      { id: 1, title: "Escuchar 1", artist: "Artista 1", imageUrl: "/Songs/Rectangle 1.svg" },
+      { id: 2, title: "Escuchar 2", artist: "Artista 2", imageUrl: "/Songs/Rectangle 1.svg" }
     ],
     Album: [
-      { id: 1, title: "Titulo 1", artist: "Artista 1", imageUrl: "public/similar_to.svg", name: "Art.1" },
-      { id: 2, title: "Titulo 2", artist: "Artista 2", imageUrl: "public/similar_to.svg", name: "Art.2" },
-      { id: 3, title: "Titulo 3", artist: "Artista 3", imageUrl: "public/similar_to.svg", name: "Art.3" },
-      { id: 4, title: "Titulo 4", artist: "Artista 4", imageUrl: "public/similar_to.svg", name: "Art.4" },
-      { id: 5, title: "Titulo 5", artist: "Artista 5", imageUrl: "public/similar_to.svg", name: "Art.5" }
+      { id: 1, title: "Titulo 1", artist: "Artista 1", imageUrl: "/similar_to.svg", name: "Art.1" },
+      { id: 2, title: "Titulo 2", artist: "Artista 2", imageUrl: "/similar_to.svg", name: "Art.2" },
+      { id: 3, title: "Titulo 3", artist: "Artista 3", imageUrl: "/similar_to.svg", name: "Art.3" },
+      { id: 4, title: "Titulo 4", artist: "Artista 4", imageUrl: "/similar_to.svg", name: "Art.4" },
+      { id: 5, title: "Titulo 5", artist: "Artista 5", imageUrl: "/similar_to.svg", name: "Art.5" }
     ],
     SideBarProps: [
       {
-        userName: "Marco", userImage: "public/PERFIL.png",
+        userName: "Marco", userImage: "/PERFIL.png",
         onButtonClick: function (): void {
           throw new Error("Function not implemented.");
         }
